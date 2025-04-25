@@ -24,7 +24,7 @@ setup(
     maintainer="Ruben Gomez",
     maintainer_email="rubgomez93@gmail.com",
     name='django-admin-bootstrapped',
-    version='3.0.0',
+    version='3.0.1',
     description='A Bootstrap theme for Django Admin',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
     url='https://github.com/rubgombar1/django-admin-bootstrapped/',
