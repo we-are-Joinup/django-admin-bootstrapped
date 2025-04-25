@@ -283,3 +283,13 @@ p.file-upload > input[type="file"] {
 .form-row {
     font-size: 13px;
 }
+
+/* gis */
+
+.dj_map_wrapper {
+    width: 100%;
+}
+
+.dj_map_wrapper .dj_map {
+    width: 100%;
+}
