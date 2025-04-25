@@ -14,13 +14,8 @@ a:focus {
 .controls > p {
     padding-top: 5px;
 }
-.controls > ul,
-.controls .related-widget-wrapper > ul {
-    list-style-type: none;
-    padding-left: 0px;
-}
-.controls > ul label,
-.controls .related-widget-wrapper > ul label {
+.controls label,
+.controls .related-widget-wrapper label {
     font-size: 14px;
 }
 .controls > ul .form-control,
@@ -90,9 +85,11 @@ a:focus {
     border-radius: 4px 4px 0px 0px;
 }
 /* selector filter box bootstrapping */
-.selector .selector-available input {
+.selector .selector-available input,
+.selector .selector-chosen input {
     width: 80%;
     height: 34px;
+    flex-grow: 0;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 1.42857;
@@ -104,7 +101,8 @@ a:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
-.selector .selector-available p {
+.selector .selector-available p,
+.selector .selector-chosen p {
     background: rgba(211, 211, 211, 0.2);
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -263,4 +261,25 @@ p.file-upload > input[type="file"] {
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
+}
+
+.calendarbox, .clockbox {
+    background: white;
+    font-size: 12px;
+}
+
+.calendar td a:focus, .timelist a:focus, .calendar td a:hover, .timelist a:hover {
+    background: #79aec8;
+    color: white;
+}
+
+.calendar-cancel {
+    background: #eee;
+    border-top: 1px solid #ddd;
+    color: #333;
+    font-size: 12px;
+}
+
+.form-row {
+    font-size: 13px;
 }

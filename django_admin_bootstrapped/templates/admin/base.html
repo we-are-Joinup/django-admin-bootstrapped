@@ -1,4 +1,4 @@
-{% load i18n admin_static bootstrapped_goodies_tags %}
+{% load i18n static bootstrapped_goodies_tags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
@@ -21,9 +21,12 @@
         window.__admin_utc_offset__ = "{% filter escapejs %}{% now "Z" %}{% endfilter %}";
     //]]>
     </script>
-    <script src="{% static "admin/js/jquery-1.9.1.min.js" %}"></script>
+    
+    {% if not media %}
+    <script src="{% static "admin/js/vendor/jquery/jquery.min.js" %}"></script>
     <script src="{% static "admin/js/jquery-migrate-1.2.1.min.js" %}"></script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    {% endif %}
 
     {% block extrahead %}{% endblock %}
 
